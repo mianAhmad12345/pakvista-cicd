@@ -1,14 +1,36 @@
-name: CD - Development
+name: Continuous Delivery - Development Environment
+
 on:
   push:
-    branches: [ develop ]
+    branches:
+      - develop
+
+concurrency:
+  group: cd-development
+  cancel-in-progress: false
+
 jobs:
-  deploy-dev:
+  deploy-to-dev:
+    name: Trigger Render Deployment
     runs-on: ubuntu-latest
     environment: development
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Trigger Render Webhook
-        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_DEV_URL }}
-      - name: Deployment Log
-        run: echo "Deployment to Development Environment triggered at $(date)"
+      # Step 1: Check out the workspace codebase
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+
+      # Step 2: Send HTTP POST Request to the Render Dev Deploy Webhook
+      - name: Trigger Render Web Service Deployment Hook
+        run: |
+          echo "Initiating secured webhook handshake to Render Development Service..."
+          curl -f -X POST "${{ secrets.RENDER_DEPLOY_HOOK_DEV_URL }}"
+
+      # Step 3: Output confirmation message
+      - name: Confirm Deployment Dispatch
+        run: |
+          echo "========================================================================="
+          echo "SUCCESS: Deployment to pakvista-dev triggered successfully!"
+          echo "Triggered at timestamp: $(date)"
+          echo "Target Environment: Development"
+          echo "========================================================================="
