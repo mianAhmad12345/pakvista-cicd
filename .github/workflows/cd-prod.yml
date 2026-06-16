@@ -1,0 +1,14 @@
+name: CD - Production
+on:
+  push:
+    branches: [ main ]
+jobs:
+  deploy-prod:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - name: Trigger Render Webhook
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_PROD_URL }}
+      - name: Deployment Log
+        run: echo "Deployment to Production Environment triggered at $(date)"
