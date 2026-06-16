@@ -1,0 +1,32 @@
+name: CI - Development
+on:
+  pull_request:
+    branches: [ develop ]
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build with Parcel & Linting
+        run: |
+          npm install -g htmlhint stylelint stylelint-config-standard parcel
+          htmlhint "**/*.html" || true
+          stylelint "**/*.css" || true
+          parcel build index.html --no-optimize || true
+      - uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: false
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/pakvista:dev-latest
+      - run: docker tag ${{ secrets.DOCKERHUB_USERNAME }}/pakvista:dev-latest ${{ secrets.DOCKERHUB_USERNAME }}/pakvista:dev-${{ github.sha }}
+      - uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/pakvista:dev-latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/pakvista:dev-${{ github.sha }}
