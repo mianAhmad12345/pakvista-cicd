@@ -3,33 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PakVista - Home</title>
+    <title>PakVista | Premium Pakistan Tourism Portal</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-badge {
+            background-color: #ffffff;
+            color: #00401A;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: -2rem 0 3rem 0;
+            background: #ffffff;
+            padding: 2rem 1rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .stat-item h3 {
+            font-size: 2rem;
+            color: #00401A;
+            margin: 0;
+        }
+        .stat-item p {
+            margin: 5px 0 0 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .destination-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .destination-card {
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border: 1px solid #e1e8e1;
+        }
+        .destination-card:hover {
+            transform: translateY(-5px);
+        }
+        .card-content {
+            padding: 1.5rem;
+        }
+        .card-content h3 {
+            margin-top: 0;
+            color: #00401A;
+        }
+        .read-more-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #00401A;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+        .read-more-btn:hover {
+            text-decoration: underline;
+        }
+        .info-banner {
+            background-color: #00401A;
+            color: #ffffff;
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+    </style>
 </head>
 <body>
+
     <nav class="nav-bar">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="lahore.html">Lahore</a>
         <a href="hunza.html">Hunza</a>
         <a href="karachi.html">Karachi</a>
         <a href="swat.html">Swat</a>
     </nav>
+
     <header>
-        <h1>Welcome to PakVista</h1>
-        <p>Explore the stunning heritage, incredible mountain valleys, and vibrant cities of Pakistan.</p>
+        <span class="hero-badge">Official Travel Guide</span>
+        <h1>Explore the Untold Beauty of Pakistan</h1>
+        <p>From ancient Mughal architectural wonders to majestic glaciated northern peaks and shimmering coastal skylines.</p>
     </header>
+
     <main>
+        <section class="stats-grid" aria-label="Quick Portal Insights">
+            <div class="stat-item">
+                <h3>5</h3>
+                <p>Iconic Hubs</p>
+            </div>
+            <div class="stat-item">
+                <h3>7,000+</h3>
+                <p>Years of History</p>
+            </div>
+            <div class="stat-item">
+                <h3>K2 & Beyond</h3>
+                <p>Epic Terrains</p>
+            </div>
+        </section>
+
         <section>
-            <h2>Discover Pakistan</h2>
-            <p>Pakistan offers a rich spectrum of tourism opportunities, ranging from the architectural landmarks of the Mughal Empire in Lahore to the breathtaking alpine landscapes of the Karakoram range in Hunza.</p>
+            <h2>Welcome to PakVista</h2>
+            <p>PakVista is an elite informational gateway designed to introduce international travelers and local adventurers to the diverse cultural, historical, and geological landscapes of Pakistan. Whether you seek the peaceful spirituality of centuries-old heritage sites or the extreme trails of the Karakoram mountain ranges, our curated operational directories offer comprehensive regional breakdowns.</p>
+            
             <figure>
-                <div class="img-placeholder">Visual Overview of Pakistan Tourism</div>
-                <figcaption>Figure 1: Welcome to the beautiful terrains of Pakistan.</figcaption>
+                <div class="img-placeholder">PakVista Geographical Banner Showcase</div>
+                <figcaption style="text-align: center; font-style: italic; margin-top: 0.5rem; color: #555;">
+                    Figure 1: Cross-country landscape map showcasing contrasting ecosystems across Pakistan.
+                </figcaption>
             </figure>
         </section>
+
+        <hr style="border: 0; border-top: 1px solid #e1e8e1; margin: 4rem 0;">
+
+        <section>
+            <h2>Featured Regional Gateways</h2>
+            <p>Select an architectural hub or ecological landscape below to deep-dive into regional history, primary landmarks, and visual gallery asset maps.</p>
+
+            <div class="destination-grid">
+                
+                <article class="destination-card">
+                    <div class="img-placeholder" style="height: 180px;">Lahore Showcase Preview</div>
+                    <div class="card-content">
+                        <h3>Lahore &mdash; Cultural Capital</h3>
+                        <p>The historical heart of the country, famed for the Badshahi Mosque, ancient walled fortification arrays, and majestic royal gardens.</p>
+                        <a href="lahore.html" class="read-more-btn">Explore Directory &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="destination-card">
+                    <div class="img-placeholder" style="height: 180px;">Hunza Showcase Preview</div>
+                    <div class="card-content">
+                        <h3>Hunza Valley &mdash; Mountain Paradise</h3>
+                        <p>A breathtaking alpine domain featuring turquoise glaciated lakes, dramatic peak viewpoints, and historic stone fortresses.</p>
+                        <a href="hunza.html" class="read-more-btn">Explore Directory &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="destination-card">
+                    <div class="img-placeholder" style="height: 180px;">Karachi Showcase Preview</div>
+                    <div class="card-content">
+                        <h3>Karachi &mdash; City of Lights</h3>
+                        <p>A bustling maritime metropolis defined by Arabian Sea shorelines, colonial architecture, and deep industrial heritage.</p>
+                        <a href="karachi.html" class="read-more-btn">Explore Directory &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="destination-card">
+                    <div class="img-placeholder" style="height: 180px;">Swat Showcase Preview</div>
+                    <div class="card-content">
+                        <h3>Swat &mdash; Alpine Wilderness</h3>
+                        <p>The Switzerland of Asia, known for its pristine snowcapped resort zones, roaring rivers, and vibrant historic bazaars.</p>
+                        <a href="swat.html" class="read-more-btn">Explore Directory &rarr;</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="info-banner">
+            <h2>Subscribe to Tourism Dispatches</h2>
+            <p style="max-width: 600px; margin: 0 auto 1.5rem auto;">Get official seasonal updates, emergency high-altitude weather bulletins, and newly introduced eco-tourism routes.</p>
+            <form action="#" method="POST" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem;">
+                <input type="email" placeholder="Enter your academic or personal email" required style="padding: 0.75rem 1rem; border: none; border-radius: 4px; width: 300px; max-width: 100%;">
+                <button type="submit" style="background-color: #ffffff; color: #00401A; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: bold; cursor: pointer;">Register Now</button>
+            </form>
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2026 PakVista Dev Crew. Faculty of Information Technology, UCP.</p>
+        <p>&copy; 2026 PakVista Engineering Crew | Faculty of Information Technology, UCP.</p>
+        <p style="font-size: 0.8rem; color: #aaa; margin-top: 0.5rem;">DevOps Fundamentals Term Project Build Framework | Multi-Environment Architecture Strategy</p>
     </footer>
+
 </body>
 </html>
