@@ -3,13 +3,13 @@
    ========================================================================== */
 :root {
     /* Sophisticated, Clean Color Palette */
-    --primary: #004B23;           /* Deep Heritage Green */
+    --primary: #004b23;           /* Deep Heritage Green */
     --primary-light: #007236;     /* Vibrant Accent Green */
-    --neutral-dark: #1A202C;      /* Soft Charcoal (Never pure black for text) */
-    --neutral-muted: #4A5568;     /* Elegant Slate for body copy */
-    --neutral-light: #F7FAFC;     /* Ultra-clean off-white page background */
-    --surface: #FFFFFF;           /* Crisp white for cards/containers */
-    --border: #EDF2F7;            /* Subtle, faint dividers */
+    --neutral-dark: #1a202c;      /* Soft Charcoal (Never pure black for text) */
+    --neutral-muted: #4a5568;     /* Elegant Slate for body copy */
+    --neutral-light: #f7fafc;     /* Ultra-clean off-white page background */
+    --surface: #ffffff;           /* Crisp white for cards/containers */
+    --border: #edf2f7;            /* Subtle, faint dividers */
     
     /* Layout & Animation Tokens */
     --max-width: 1140px;          /* Standard editorial container width */
@@ -301,7 +301,7 @@ header p {
 .info-banner input[type="email"] {
     flex: 1;
     padding: 0.85rem 1.25rem;
-    border: 1px solid #E2E8F0;
+    border: 1px solid #e2e8f0;
     border-radius: var(--radius-sm);
     font-size: 0.95rem;
     color: var(--neutral-dark);
@@ -318,7 +318,7 @@ header p {
 
 .info-banner button {
     background-color: var(--primary);
-    color: #FFFFFF;
+    color: #ffffff;
     border: none;
     padding: 0.85rem 1.75rem;
     border-radius: var(--radius-sm);

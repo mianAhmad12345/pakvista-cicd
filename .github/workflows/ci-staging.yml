@@ -10,19 +10,13 @@ jobs:
       - name: Build with Parcel & Linting
         run: |
           npm install -g htmlhint stylelint stylelint-config-standard parcel
-          htmlhint "**/*.html" || true
-          stylelint "**/*.css" || true
-          parcel build index.html --no-optimize || true
+          htmlhint "**/*.html"
+          stylelint "**/*.css"
+          parcel build index.html --no-optimize
       - uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: false
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/pakvista:staging-latest
-      - run: docker tag ${{ secrets.DOCKERHUB_USERNAME }}/pakvista:staging-latest ${{ secrets.DOCKERHUB_USERNAME }}/pakvista:staging-${{ github.sha }}
       - uses: docker/build-push-action@v5
         with:
           context: .
