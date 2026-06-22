@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lahore - City of Gardens | PakVista</title>
+    <title>Lahore Cultural Capital | PakVista Premium</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header & Navigation Bar -->
-    <header>
-        <div class="logo-container">
-            <h1>PakVista</h1>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">PakVista<span>.</span></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#destinations" class="btn-nav">Back to Explorer</a>
+            </nav>
         </div>
+feature/ahmad/advanced-styling
         <nav class="nav-bar">
             <a href="index.html">Home</a>
             <a href="lahore.html" class="active">Lahore</a>
@@ -20,60 +25,50 @@
             <a href="karachi.html">Karachi</a>
             <a href="swat.html">Swat</a>
         </nav>
+
+main
     </header>
 
-    <!-- Main Content Body -->
-    <main>
-        <section class="hero-section">
-            <h2>Welcome to Lahore</h2>
-            <p>Discover the cultural heart of Pakistan, where majestic Mughal architecture seamlessly blends with vibrant modern heritage, lush historic gardens, and an unparalleled culinary legacy.</p>
-        </section>
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <img class="hero-bg" src="https://images.unsplash.com/photo-1601999109332-542b18dbec57?auto=format&fit=crop&w=1800&q=80" alt="Lahore Mughal Architecture">
+        <div class="hero-content">
+            <span class="hero-tag">The Walled City Culture</span>
+            <h1>Lahore Portfolio</h1>
+            <p>The historical epicentre of the Punjab, marrying grand monumental Mughal architecture with an unparalleled, legendary culinary movement.</p>
+            <a href="#itinerary" class="btn-primary">View Curations</a>
+        </div>
+    </section>
 
-        <hr>
-
-        <!-- Destination 1: Badshahi Mosque -->
-        <article class="destination-card">
-            <h3>1. The Majestic Badshahi Mosque</h3>
-            <p>Commissioned by the Mughal Emperor Aurangzeb in 1671, the Badshahi Mosque stands as an iconic monument of Islamic architecture. Built entirely with red sandstone and decorated with intricate white marble inlay, its vast courtyard can accommodate over 100,000 worshippers. The mosque's grand minarets dominate the old city's skyline, offering a profound glimpse into Pakistan's rich historical narrative.</p>
-            
-            <figure>
-                <div class="img-placeholder">
-                    <span>[Image Placeholder: The grand red sandstone facade and white marble domes of Badshahi Mosque at sunset]</span>
+    <section id="itinerary" class="destinations-section">
+        <div class="section-header">
+            <h2>Cultural Landmarks</h2>
+            <p>An archival look into the monuments defining the city's ancient core.</p>
+        </div>
+        <div class="grid-container">
+            <div class="dest-card">
+                <div class="card-content">
+                    <h3>Badshahi Mosque</h3>
+                    <p>Commissioned in 1673, an expansive masterpiece of carved red sandstone and inlaid white marble representing peak Mughal symmetry.</p>
                 </div>
-                <figcaption>Figure 1: The breathtaking exterior courtyard and symmetry of the historic Badshahi Mosque.</figcaption>
-            </figure>
-        </article>
-
-        <!-- Destination 2: Lahore Fort (Shahi Qila) -->
-        <article class="destination-card">
-            <h3>2. The Historic Lahore Fort (Shahi Qila)</h3>
-            <p>Situated directly opposite the Badshahi Mosque, the Lahore Fort is a magnificent citadel that encapsulates centuries of royal history. Successive Mughal, Sikh, and British rulers left their architectural mark on this UNESCO World Heritage site. Notable highlights include the shimmering Sheesh Mahal (Palace of Mirrors), the grand Diwan-i-Aam, and the stunningly decorated Picture Wall showcasing complex tile mosaics.</p>
-            
-            <figure>
-                <div class="img-placeholder">
-                    <span>[Image Placeholder: Intricate micro-mirror mosaics inside the royal Sheesh Mahal pavilion]</span>
+            </div>
+            <div class="dest-card">
+                <div class="card-content">
+                    <h3>The Walled City Gates</h3>
+                    <p>Step through centuries-old checkpoints into a lively maze of vibrant bazaars, subterranean spice routes, and colonial-era architecture.</p>
                 </div>
-                <figcaption>Figure 2: Architectural details inside the legendary Sheesh Mahal within the Lahore Fort complex.</figcaption>
-            </figure>
-        </article>
-
-        <!-- Destination 3: Shalimar Gardens -->
-        <article class="destination-card">
-            <h3>3. The Royal Shalimar Gardens</h3>
-            <p>Constructed by Emperor Shah Jahan in 1642, the Shalimar Gardens are a masterclass in classic Mughal charbagh layout. Spread across three descending tiers or terraces, the gardens feature hundreds of continuous fountains, white marble pavilions, and highly curated water cascades. This architectural oasis was intentionally crafted to symbolize an earthly paradise, highlighting historic engineering marvels of hydrological design.</p>
-            
-            <figure>
-                <div class="img-placeholder">
-                    <span>[Image Placeholder: Symmetrical water fountains flowing between stepped green terraces at Shalimar Gardens]</span>
+            </div>
+            <div class="dest-card">
+                <div class="card-content">
+                    <h3>Shalimar Gardens</h3>
+                    <p>A tranquil, triple-terraced complex built as a private refuge, showcasing elaborate water cascades and classic geometric layouts.</p>
                 </div>
-                <figcaption>Figure 3: Cascading water features and layout of the UNESCO-protected Shalimar Gardens.</figcaption>
-            </figure>
-        </article>
-    </main>
+            </div>
+        </div>
+    </section>
 
-    <!-- Shared Visual Footer -->
-    <footer>
-        <p>&copy; 2026 PakVista Touristic Informatics. Built for DevOps Fundamentals (FIT, UCP). All Rights Reserved.</p>
+    <footer class="footer">
+        <p>&copy; 2026 PakVista. Curated Editorial Travel Assets.</p>
     </footer>
 
 </body>
