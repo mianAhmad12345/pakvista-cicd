@@ -3,143 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PakVista | Premium Travel Across Pakistan</title>
+    <title>PakVista Portal | Discover Pakistan</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Navigation Header -->
     <header class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">PakVista<span>.</span></a>
-            <nav class="nav-links">
-                <a href="#">Home</a>
-                <a href="#destinations">Destinations</a>
-                <a href="#dashboard">Dashboard</a>
-                <a href="#newsletter" class="btn-nav">Subscribe</a>
-            </nav>
-        </div>
+        <div class="logo">PakVista</div>
+        <nav>
+            <ul>
+                <li><a href="#explore">Explore</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#guides">Guides</a></li>
+                <li><a href="#journal">Journal</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <img class="hero-bg" src="https://images.unsplash.com/photo-1624314138474-55901afbc2db?auto=format&fit=crop&w=1800&q=80" alt="Passu Cones Pakistan">
-        <div class="hero-content">
-            <span class="hero-tag">The Ultimate Expedition</span>
-            <h1>Discover Pakistan</h1>
-            <p>Experience an editorial journey through untouched northern peaks, ancient Mughal architecture, and vibrant coastal cities.</p>
-            <a href="#destinations" class="btn-primary">Explore Destinations</a>
-        </div>
-    </section>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="explore">
+            <div class="hero-content">
+                <h1>Discover Pakistan</h1>
+                <p>Experience the timeless heritage, pristine northern valleys, and breathtaking landscapes of an ancient land.</p>
+            </div>
+        </section>
 
-    <!-- Destinations Grid Section -->
-    <section id="destinations" class="destinations-section">
-        <div class="section-header">
-            <h2>Curated Destinations</h2>
-            <p>Handpicked locations offering breathtaking landscapes and rich cultural heritage.</p>
-        </div>
+        <!-- Metrics / Stats Dashboard -->
+        <section class="stats-dashboard">
+            <div class="stat-card">
+                <h3>7,000+</h3>
+                <p>Glaciers Explored</p>
+            </div>
+            <div class="stat-card">
+                <h3>100+</h3>
+                <p>Heritage Sites</p>
+            </div>
+            <div class="stat-card">
+                <h3>24/7</h3>
+                <p>Local Assistance</p>
+            </div>
+        </section>
 
-        <div class="grid-container">
-            <!-- Hunza Card -->
-            <div class="dest-card">
-                <div class="img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1548263514-a1b43d8ec6fc?auto=format&fit=crop&w=800&q=80" alt="Hunza Valley">
-                </div>
-                <div class="card-content">
+        <!-- Regional Explorer Grid -->
+        <section class="destinations-section" id="destinations">
+            <h2>Featured Destinations</h2>
+            <div class="destinations-grid">
+                
+                <!-- Hunza Card -->
+                <div class="destination-card">
                     <h3>Hunza Valley</h3>
-                    <p>Immerse yourself in dramatic mountain vistas, ancient forts, and crystal-clear turquoise waters.</p>
-                    <a href="hunza.html" class="card-link">Explore Region &rarr;</a>
+                    <p>Framed by the towering Rakaposhi and Ultar Sar peaks, Hunza offers pristine alpine lakes, terraced orchards, and centuries-old fortresses.</p>
+                    <a href="hunza.html" class="btn-link">Explore Valley →</a>
                 </div>
-            </div>
 
-            <!-- Lahore Card -->
-            <div class="dest-card">
-                <div class="img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1601999109332-542b18dbec57?auto=format&fit=crop&w=800&q=80" alt="Badshahi Mosque Lahore">
+                <!-- Skardu Card -->
+                <div class="destination-card">
+                    <h3>Skardu & Baltistan</h3>
+                    <p>The gateway to the mighty Karakoram range. Home to turquoise lakes, high-altitude cold deserts, and rugged expedition trails.</p>
+                    <a href="#" class="btn-link">View Expeditions →</a>
                 </div>
-                <div class="card-content">
-                    <h3>Lahore</h3>
-                    <p>Walk through history inside legendary Mughal landmarks, dynamic food streets, and walled city gates.</p>
-                    <a href="lahore.html" class="card-link">Explore Region &rarr;</a>
-                </div>
-            </div>
 
-            <!-- Karachi Card -->
-            <div class="dest-card">
-                <div class="img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&w=800&q=80" alt="Karachi Coastline">
+                <!-- Lahore Card -->
+                <div class="destination-card">
+                    <h3>Mughal Lahore</h3>
+                    <p>The cultural heart of the nation. Discover grand architectural masterpieces like the Badshahi Mosque, Shahi Qila, and dynamic local food markets.</p>
+                    <a href="lahore.html" class="btn-link">Discover History →</a>
                 </div>
-                <div class="card-content">
-                    <h3>Karachi</h3>
-                    <p>Discover the energy of Pakistan's coastal economic powerhouse, sandy beaches, and endless culinary paths.</p>
-                    <a href="karachi.html" class="card-link">Explore Region &rarr;</a>
-                </div>
-            </div>
 
-            <!-- Swat Card -->
-            <div class="dest-card">
-                <div class="img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1627844718625-51e18cc8569c?auto=format&fit=crop&w=800&q=80" alt="Swat Valley Landscape">
-                </div>
-                <div class="card-content">
+                <!-- Swat Card (Integrating your created subpage) -->
+                <div class="destination-card">
                     <h3>Swat Valley</h3>
-                    <p>Unearth the Switzerland of the East, showcasing raging rivers, emerald orchards, and snow-capped horizons.</p>
-                    <a href="swat.html" class="card-link">Explore Region &rarr;</a>
+                    <p>Known as the Switzerland of the East. Explore lush green meadows, clear flowing rivers, and rich archaeological Buddhist ruins.</p>
+                    <a href="swat.html" class="btn-link">Explore Swat →</a>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Stats Dashboard & Hub Navigator Section -->
-    <section id="dashboard" class="stats-section">
-        <div class="section-header">
-            <h2>Regional Explorer Dashboard</h2>
-            <p>Select an administrative operational sector below to access full localized field itineraries instantly.</p>
-        </div>
-        
-        <!-- Interactive Navigation Hub Buttons -->
-        <div class="dashboard-controls" style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 4rem; flex-wrap: wrap;">
-            <a href="lahore.html" class="btn-primary" style="background-color: var(--text-main); color: white; border: 1px solid var(--text-main);">Launch Lahore Portal</a>
-            <a href="hunza.html" class="btn-primary" style="background-color: var(--text-main); color: white; border: 1px solid var(--text-main);">Launch Hunza Portal</a>
-            <a href="karachi.html" class="btn-primary" style="background-color: var(--text-main); color: white; border: 1px solid var(--text-main);">Launch Karachi Portal</a>
-            <a href="swat.html" class="btn-primary" style="background-color: var(--text-main); color: white; border: 1px solid var(--text-main);">Launch Swat Portal</a>
-        </div>
-
-        <div class="stats-container">
-            <div class="stat-item">
-                <span class="stat-number">40+</span>
-                <span class="stat-label">Hidden Valleys</span>
             </div>
-            <div class="stat-item">
-                <span class="stat-number">5000+</span>
-                <span class="stat-label">Miles Explored</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">100%</span>
-                <span class="stat-label">Local Guidance</span>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Newsletter Section -->
-    <section id="newsletter" class="newsletter-section">
-        <div class="newsletter-box">
-            <h2>Join the Inner Circle</h2>
-            <p>Get quarterly, bespoke travel itineraries and exclusive cultural insight logs right in your inbox.</p>
-            <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
-                <input type="email" placeholder="Enter your email address" required>
-                <button type="submit" class="btn-submit">Subscribe</button>
-            </form>
-        </div>
-    </section>
+        <!-- Newsletter Dispatch Section -->
+        <section class="newsletter-section">
+            <div class="newsletter-container">
+                <h2>The Traveler's Dispatch</h2>
+                <p>Receive curated routes, historical context pieces, and seasonal travel alerts directly to your inbox.</p>
+                <form class="subscribe-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn-subscribe">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 PakVista. Designed with strict minimalist editorial principles.</p>
+    <!-- Optimized Footer -->
+    <footer>
+        <p>&copy; 2026 PakVista Portal. All rights reserved. Built with pure performance optimization.</p>
     </footer>
 
 </body>
