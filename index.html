@@ -33,59 +33,138 @@
             <span class="hero-tag">Premium Travel Documentaries</span>
             <h1>Explore Pakistan</h1>
             <p>An archival look into the architectural landmarks, subterranean histories, and dramatic alpine topographies defining the region.</p>
-            <a href="#destinations" class="btn-primary">Launch Explorer</a>
+            <a href="#dashboard" class="btn-primary">View Analytics</a>
         </div>
     </section>
 
-    <!-- Consolidated Main Destination Hub -->
+    <!-- Corrected Regional Analytics Dashboard Section -->
+    <section class="stats-section" id="dashboard" style="max-width: 1140px; margin: 4rem auto 0 auto; padding: 0 1.5rem;">
+        <div class="section-header">
+            <h2>Regional Engagement Dashboard</h2>
+            <p>Real-time telemetry, user interaction matrices, and isolated image assets per tracking hub.</p>
+        </div>
+
+        <!-- Using Card Grid Layout to force independent image allocation -->
+        <div class="grid-container">
+            
+            <!-- Dashboard Node 1: Lahore -->
+            <div class="dest-card">
+                <div class="img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1627915726244-933e4d9c7cb3?auto=format&fit=crop&w=600&q=80" alt="Lahore Analytics Data">
+                </div>
+                <div class="card-content" style="text-align: center; padding: 2rem 1.5rem;">
+                    <span class="stat-number">94%</span>
+                    <p class="stat-label">Lahore Engagement</p>
+                </div>
+            </div>
+
+            <!-- Dashboard Node 2: Hunza -->
+            <div class="dest-card">
+                <div class="img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=600&q=80" alt="Hunza Analytics Data">
+                </div>
+                <div class="card-content" style="text-align: center; padding: 2rem 1.5rem;">
+                    <span class="stat-number">88%</span>
+                    <p class="stat-label">Hunza Traffic</p>
+                </div>
+            </div>
+
+            <!-- Dashboard Node 3: Karachi -->
+            <div class="dest-card">
+                <div class="img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1605641251390-38e9d5013063?auto=format&fit=crop&w=600&q=80" alt="Karachi Analytics Data">
+                </div>
+                <div class="card-content" style="text-align: center; padding: 2rem 1.5rem;">
+                    <span class="stat-number">91%</span>
+                    <p class="stat-label">Karachi Activity</p>
+                </div>
+            </div>
+
+            <!-- Dashboard Node 4: Swat -->
+            <div class="dest-card">
+                <div class="img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80" alt="Swat Analytics Data">
+                </div>
+                <div class="card-content" style="text-align: center; padding: 2rem 1.5rem;">
+                    <span class="stat-number">85%</span>
+                    <p class="stat-label">Swat Explorations</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Curated Portfolios Section (Magazine Grid Style) -->
     <main class="destinations-section" id="destinations">
         <div class="section-header">
             <h2>Curated Portfolios</h2>
             <p>Select an urban center or geographical zone to explore its architectural assets and interactive features.</p>
         </div>
         
-        <div class="grid-container">
-            <!-- Destination Card 1: Lahore -->
-            <div class="dest-card">
-                <img src="https://images.unsplash.com/photo-1627915726244-933e4d9c7cb3?auto=format&fit=crop&w=600&q=80" alt="Lahore Mughal Architecture">
-                <div class="card-content">
+        <div class="card-grid">
+            
+            <!-- Card 1: Lahore -->
+            <figure class="landmark-card">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1627915726244-933e4d9c7cb3?auto=format&fit=crop&w=600&q=80" alt="Lahore Badshahi Mosque">
+                </div>
+                <figcaption class="card-content">
                     <h3>Lahore</h3>
                     <p>The cultural capital marrying grand monumental Mughal architecture with legendary culinary movements and interactive user polls.</p>
                     <a href="lahore.html" class="card-link">Explore Portfolio &rarr;</a>
-                </div>
-            </div>
+                </figcaption>
+            </figure>
 
-            <!-- Destination Card 2: Hunza -->
-            <div class="dest-card">
-                <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=600&q=80" alt="Hunza Mountain Peaks">
-                <div class="card-content">
+            <!-- Card 2: Hunza Valley -->
+            <figure class="landmark-card">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=600&q=80" alt="Hunza Mountain Peaks">
+                </div>
+                <figcaption class="card-content">
                     <h3>Hunza Valley</h3>
                     <p>Framed by towering Karakoram horizons, offering pristine alpine lakes, historic stone outposts, and sweeping high-altitude vistas.</p>
                     <a href="hunza.html" class="card-link">Explore Portfolio &rarr;</a>
-                </div>
-            </div>
+                </figcaption>
+            </figure>
 
-            <!-- Destination Card 3: Karachi -->
-            <div class="dest-card">
-                <img src="https://images.unsplash.com/photo-1605641251390-38e9d5013063?auto=format&fit=crop&w=600&q=80" alt="Karachi Marine Port">
-                <div class="card-content">
+            <!-- Card 3: Karachi Hub -->
+            <figure class="landmark-card">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1605641251390-38e9d5013063?auto=format&fit=crop&w=600&q=80" alt="Karachi Coastal Horizon">
+                </div>
+                <figcaption class="card-content">
                     <h3>Karachi Hub</h3>
                     <p>A dynamic, sprawling coastal mega-city serving as the financial engine room and industrial marine heartbeat of the south coast.</p>
                     <a href="karachi.html" class="card-link">Explore Portfolio &rarr;</a>
-                </div>
-            </div>
+                </figcaption>
+            </figure>
 
-            <!-- Destination Card 4: Swat -->
-            <div class="dest-card">
-                <img src="https://images.unsplash.com/photo-1627844718625-51e18cc8569c?auto=format&fit=crop&w=600&q=80" alt="Swat Valley Riverbeds">
-                <div class="card-content">
+            <!-- Card 4: Swat Valley -->
+            <figure class="landmark-card">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80" alt="Swat Valley Alpine Meadow">
+                </div>
+                <figcaption class="card-content">
                     <h3>Swat Valley</h3>
                     <p>Known as the Switzerland of the East, showcasing lush green meadow landscapes, winter ski bases, and glacial river paths.</p>
                     <a href="swat.html" class="card-link">Explore Portfolio &rarr;</a>
-                </div>
-            </div>
+                </figcaption>
+            </figure>
+
         </div>
     </main>
+
+    <!-- Clean Form / Subscription Layout -->
+    <section class="newsletter-section">
+        <div class="newsletter-box">
+            <h2>Subscribe to Intel Briefings</h2>
+            <p>Receive premium architectural updates, travel dossiers, and systemic regional reporting indexes logs directly.</p>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Enter valid email address" required>
+                <button type="submit" class="btn-submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
 
     <!-- Global Layout Footer -->
     <footer class="footer">
