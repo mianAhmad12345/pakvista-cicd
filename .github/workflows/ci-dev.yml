@@ -1,26 +1,33 @@
-name: CI - Development
+name: Development CI Pipeline
+
 on:
+  push:
+    branches:
+      - 'feature/ahmad/*'
+      - develop
   pull_request:
-    branches: [ develop ]
+    branches:
+      - develop
+
 jobs:
-  build-and-validate:
+  dev-build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Build with Parcel & Linting
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Sanitize Workspace Windows Metadata
         run: |
-          npm install -g htmlhint stylelint stylelint-config-standard parcel
-          htmlhint "**/*.html"
-          stylelint "**/*.css"
-          parcel build index.html --no-optimize
-      - uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - uses: docker/build-push-action@v5
+          find . -name "*:Zone.Identifier" -delete
+          echo "Workspace sanitized for Dev environment."
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Test Build Dev Container
+        uses: docker/build-push-action@v5
         with:
           context: .
-          push: true
-          tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/pakvista:dev-latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/pakvista:dev-${{ github.sha }}
+          file: ./Dockerfile
+          push: false
+          tags: pakvista-portal:dev
