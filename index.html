@@ -37,64 +37,89 @@
         </div>
     </section>
 
-    <!-- Regional Analytics Dashboard Section -->
-    <section class="stats-section" id="dashboard" style="max-width: 1140px; margin: 4rem auto 0 auto; padding: 0 1.5rem;">
+    <!-- Redesigned Regional Analytics Dashboard (Distinct Metric UI Structure) -->
+    <section class="stats-section" id="dashboard" style="max-width: 1140px; margin: 5rem auto 0 auto; padding: 0 1.5rem;">
         <div class="section-header">
-            <h2>Regional Engagement Dashboard</h2>
-            <p>Real-time telemetry, user interaction matrices, and isolated image assets per tracking hub.</p>
+            <h2>Regional Telemetry Dashboard</h2>
+            <p>Live user interaction ratios, retention matrices, and distinct regional asset tracking nodes.</p>
         </div>
 
-        <div class="grid-container">
+        <!-- Distinct Grid Structure for Telemetry Data Widgets -->
+        <div class="analytics-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 2.5rem;">
             
-            <!-- Dashboard Node 1: Lahore -->
-            <div class="dest-card">
-                <div class="img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1601999109332-542b18dbec57?auto=format&fit=crop&w=600&q=80" alt="Lahore Analytics Data">
+            <!-- Analytics Node 1: Lahore -->
+            <div class="analytics-widget" style="background: #11141a; border: 1px solid #222733; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;">
+                <div class="widget-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <span style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #8a94a6;">Node-01 // Lahore</span>
+                    <span class="status-indicator" style="width: 8px; height: 8px; background: #10b981; border-radius: 50%;"></span>
                 </div>
-                <div class="card-content" style="text-align: center; padding: 2rem 1.5rem;">
-                    <span class="stat-number">94%</span>
-                    <p class="stat-label">Lahore Engagement</p>
-                </div>
-            </div>
-
-            <!-- Dashboard Node 2: Hunza -->
-            <div class="dest-card">
-                <div class="img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=600&q=80" alt="Hunza Analytics Data">
-                </div>
-                <div class="card-content" style="text-align: center; padding: 2rem 1.5rem;">
-                    <span class="stat-number">88%</span>
-                    <p class="stat-label">Hunza Traffic</p>
+                <div class="widget-body" style="display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem;">
+                    <div>
+                        <h3 style="font-size: 2.5rem; font-weight: 700; color: #ffffff; line-height: 1; margin: 0 0 0.25rem 0;">94%</h3>
+                        <p style="font-size: 0.8rem; color: #626f84; margin: 0;">User Engagement</p>
+                    </div>
+                    <div class="widget-preview-frame" style="width: 70px; height: 50px; border-radius: 6px; overflow: hidden; background: #1a1f2c;">
+                        <img src="https://images.unsplash.com/photo-1601999109332-542b18dbec57?auto=format&fit=crop&w=150&q=80" alt="Lahore Data Map" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(30%) contrast(110%);">
+                    </div>
                 </div>
             </div>
 
-            <!-- Dashboard Node 3: Karachi (Fixed Asset Link) -->
-            <div class="dest-card">
-                <div class="img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1620755853775-68ae2fbc78a0?auto=format&fit=crop&w=600&q=80" alt="Karachi Analytics Data">
+            <!-- Analytics Node 2: Hunza -->
+            <div class="analytics-widget" style="background: #11141a; border: 1px solid #222733; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;">
+                <div class="widget-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <span style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #8a94a6;">Node-02 // Hunza</span>
+                    <span class="status-indicator" style="width: 8px; height: 8px; background: #10b981; border-radius: 50%;"></span>
                 </div>
-                <div class="card-content" style="text-align: center; padding: 2rem 1.5rem;">
-                    <span class="stat-number">91%</span>
-                    <p class="stat-label">Karachi Activity</p>
+                <div class="widget-body" style="display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem;">
+                    <div>
+                        <h3 style="font-size: 2.5rem; font-weight: 700; color: #ffffff; line-height: 1; margin: 0 0 0.25rem 0;">88%</h3>
+                        <p style="font-size: 0.8rem; color: #626f84; margin: 0;">Traffic Retention</p>
+                    </div>
+                    <div class="widget-preview-frame" style="width: 70px; height: 50px; border-radius: 6px; overflow: hidden; background: #1a1f2c;">
+                        <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=150&q=80" alt="Hunza Data Map" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(30%) contrast(110%);">
+                    </div>
                 </div>
             </div>
 
-            <!-- Dashboard Node 4: Swat -->
-            <div class="dest-card">
-                <div class="img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80" alt="Swat Analytics Data">
+            <!-- Analytics Node 3: Karachi (Verified Working Image Asset) -->
+            <div class="analytics-widget" style="background: #11141a; border: 1px solid #222733; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;">
+                <div class="widget-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <span style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #8a94a6;">Node-03 // Karachi</span>
+                    <span class="status-indicator" style="width: 8px; height: 8px; background: #10b981; border-radius: 50%;"></span>
                 </div>
-                <div class="card-content" style="text-align: center; padding: 2rem 1.5rem;">
-                    <span class="stat-number">85%</span>
-                    <p class="stat-label">Swat Explorations</p>
+                <div class="widget-body" style="display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem;">
+                    <div>
+                        <h3 style="font-size: 2.5rem; font-weight: 700; color: #ffffff; line-height: 1; margin: 0 0 0.25rem 0;">91%</h3>
+                        <p style="font-size: 0.8rem; color: #626f84; margin: 0;">System Density</p>
+                    </div>
+                    <div class="widget-preview-frame" style="width: 70px; height: 50px; border-radius: 6px; overflow: hidden; background: #1a1f2c;">
+                        <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&w=150&q=80" alt="Karachi Data Map" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(30%) contrast(110%);">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics Node 4: Swat -->
+            <div class="analytics-widget" style="background: #11141a; border: 1px solid #222733; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;">
+                <div class="widget-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <span style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #8a94a6;">Node-04 // Swat</span>
+                    <span class="status-indicator" style="width: 8px; height: 8px; background: #10b981; border-radius: 50%;"></span>
+                </div>
+                <div class="widget-body" style="display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem;">
+                    <div>
+                        <h3 style="font-size: 2.5rem; font-weight: 700; color: #ffffff; line-height: 1; margin: 0 0 0.25rem 0;">85%</h3>
+                        <p style="font-size: 0.8rem; color: #626f84; margin: 0;">Discovery Vectors</p>
+                    </div>
+                    <div class="widget-preview-frame" style="width: 70px; height: 50px; border-radius: 6px; overflow: hidden; background: #1a1f2c;">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=150&q=80" alt="Swat Data Map" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(30%) contrast(110%);">
+                    </div>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- Curated Portfolios Section -->
-    <main class="destinations-section" id="destinations">
+    <!-- Curated Portfolios Section (Classic Vertical Editorial Grid) -->
+    <main class="destinations-section" id="destinations" style="margin-top: 5rem;">
         <div class="section-header">
             <h2>Curated Portfolios</h2>
             <p>Select an urban center or geographical zone to explore its architectural assets and interactive features.</p>
@@ -126,10 +151,10 @@
                 </figcaption>
             </figure>
 
-            <!-- Card 3: Karachi Hub (Fixed Asset Link) -->
+            <!-- Card 3: Karachi Hub (Verified Working Image Asset) -->
             <figure class="landmark-card">
                 <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1620755853775-68ae2fbc78a0?auto=format&fit=crop&w=600&q=80" alt="Karachi Coastal Horizon">
+                    <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&w=600&q=80" alt="Karachi Coastal Horizon">
                 </div>
                 <figcaption class="card-content">
                     <h3>Karachi Hub</h3>
