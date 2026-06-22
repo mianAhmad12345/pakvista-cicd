@@ -3,80 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lahore - City of Gardens | PakVista</title>
+    <title>Explore Lahore - The Heart of Pakistan</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header & Navigation Bar -->
-    <header>
-        <div class="logo-container">
-            <h1>PakVista</h1>
+    <header class="hero-section">
+        <div class="hero-overlay">
+            <h1>Welcome to Lahore</h1>
+            <p>The cultural capital, rich history, vibrant food, and endless life.</p>
+            <button class="cta-btn" onclick="generateFact()">Reveal a Fun Fact!</button>
+            <p id="fact-display" class="fact-text"></p>
         </div>
-        <nav class="nav-bar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="lahore.html" class="active">Lahore</a></li>
-                <li><a href="hunza.html">Hunza Valley</a></li>
-                <li><a href="karachi.html">Karachi</a></li>
-                <li><a href="swat.html">Swat</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Main Content Body -->
-    <main>
-        <section class="hero-section">
-            <h2>Welcome to Lahore</h2>
-            <p>Discover the cultural heart of Pakistan, where majestic Mughal architecture seamlessly blends with vibrant modern heritage, lush historic gardens, and an unparalleled culinary legacy.</p>
+    <main class="container">
+        
+        <section class="interactive-poll">
+            <h2>Cast Your Vote: What's your ultimate Lahore vibe?</h2>
+            <div class="poll-buttons">
+                <button onclick="castLocalVote('Food')">🍔 The Food (Gawalmandi / MM Alam)</button>
+                <button onclick="castLocalVote('History')">🕌 The History (Walled City / Badshahi)</button>
+                <button onclick="castLocalVote('Cricket')">🏏 The Cricket (Gaddafi Stadium)</button>
+            </div>
+            <div id="poll-feedback" class="poll-result"></div>
         </section>
 
         <hr>
 
-        <!-- Destination 1: Badshahi Mosque -->
-        <article class="destination-card">
-            <h3>1. The Majestic Badshahi Mosque</h3>
-            <p>Commissioned by the Mughal Emperor Aurangzeb in 1671, the Badshahi Mosque stands as an iconic monument of Islamic architecture. Built entirely with red sandstone and decorated with intricate white marble inlay, its vast courtyard can accommodate over 100,000 worshippers. The mosque's grand minarets dominate the old city's skyline, offering a profound glimpse into Pakistan's rich historical narrative.</p>
-            
-            <figure>
-                <div class="img-placeholder">
-                    <span>[Image Placeholder: The grand red sandstone facade and white marble domes of Badshahi Mosque at sunset]</span>
-                </div>
-                <figcaption>Figure 1: The breathtaking exterior courtyard and symmetry of the historic Badshahi Mosque.</figcaption>
-            </figure>
-        </article>
+        <section class="gallery-section">
+            <h2>Must-Visit Historical Landmarks</h2>
+            <div class="card-grid">
+                
+                <figure class="landmark-card">
+                    <img src="https://images.unsplash.com/photo-1627915726244-933e4d9c7cb3?auto=format&fit=crop&w=600&q=80" alt="Badshahi Mosque Lahore">
+                    <figcaption>
+                        <h3>Badshahi Mosque</h3>
+                        <p>Commissioned by Emperor Aurangzeb in 1671, this iconic masterpiece represents the pinnacle of Mughal architectural beauty and grandeur.</p>
+                    </figcaption>
+                </figure>
 
-        <!-- Destination 2: Lahore Fort (Shahi Qila) -->
-        <article class="destination-card">
-            <h3>2. The Historic Lahore Fort (Shahi Qila)</h3>
-            <p>Situated directly opposite the Badshahi Mosque, the Lahore Fort is a magnificent citadel that encapsulates centuries of royal history. Successive Mughal, Sikh, and British rulers left their architectural mark on this UNESCO World Heritage site. Notable highlights include the shimmering Sheesh Mahal (Palace of Mirrors), the grand Diwan-i-Aam, and the stunningly decorated Picture Wall showcasing complex tile mosaics.</p>
-            
-            <figure>
-                <div class="img-placeholder">
-                    <span>[Image Placeholder: Intricate micro-mirror mosaics inside the royal Sheesh Mahal pavilion]</span>
-                </div>
-                <figcaption>Figure 2: Architectural details inside the legendary Sheesh Mahal within the Lahore Fort complex.</figcaption>
-            </figure>
-        </article>
+                <figure class="landmark-card">
+                    <img src="https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?auto=format&fit=crop&w=600&q=80" alt="Lahore Fort Shahi Qila">
+                    <figcaption>
+                        <h3>The Shahi Qila</h3>
+                        <p>A sprawling citadel containing the gorgeous Sheesh Mahal (Palace of Mirrors), packed with centuries of royal history.</p>
+                    </figcaption>
+                </figure>
 
-        <!-- Destination 3: Shalimar Gardens -->
-        <article class="destination-card">
-            <h3>3. The Royal Shalimar Gardens</h3>
-            <p>Constructed by Emperor Shah Jahan in 1642, the Shalimar Gardens are a masterclass in classic Mughal charbagh layout. Spread across three descending tiers or terraces, the gardens feature hundreds of continuous fountains, white marble pavilions, and highly curated water cascades. This architectural oasis was intentionally crafted to symbolize an earthly paradise, highlighting historic engineering marvels of hydrological design.</p>
-            
-            <figure>
-                <div class="img-placeholder">
-                    <span>[Image Placeholder: Symmetrical water fountains flowing between stepped green terraces at Shalimar Gardens]</span>
-                </div>
-                <figcaption>Figure 3: Cascading water features and layout of the UNESCO-protected Shalimar Gardens.</figcaption>
-            </figure>
-        </article>
+                <figure class="landmark-card">
+                    <img src="https://images.unsplash.com/photo-1599925232817-47b1c3fa6db7?auto=format&fit=crop&w=600&q=80" alt="Minar e Pakistan">
+                    <figcaption>
+                        <h3>Minar-e-Pakistan</h3>
+                        <p>The historic tower standing tall in Iqbal Park, marking the exact site where the Pakistan Resolution was passed in 1940.</p>
+                    </figcaption>
+                </figure>
+
+            </div>
+        </section>
     </main>
 
-    <!-- Shared Visual Footer -->
     <footer>
-        <p>&copy; 2026 PakVista Touristic Informatics. Built for DevOps Fundamentals (FIT, UCP). All Rights Reserved.</p>
+        <p>&copy; 2026 PakVista DevOps Team Project. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        const facts = [
+            "Lahore is famously known as 'Zinda Dilon Ka Shaher' (The City of Lively Hearts)!",
+            "The Walled City of Lahore originally had 13 historic entry gates.",
+            "The Lahore Fort's Picture Wall is one of the largest mural walls in the entire world!",
+            "Lahore's local food street in Anarkali is one of the oldest continuously operating food hubs in South Asia."
+        ];
+
+        function generateFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            const display = document.getElementById("fact-display");
+            display.innerText = facts[randomIndex];
+        }
+
+        function castLocalVote(vibe) {
+            const feedback = document.getElementById("poll-feedback");
+            feedback.innerHTML = `🎉 Awesome! You voted for <strong>${vibe}</strong>. Lahore definitely rules in that department!`;
+        }
+    </script>
 </body>
 </html>
