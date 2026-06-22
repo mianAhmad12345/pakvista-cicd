@@ -5,55 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swat Valley Portfolio | PakVista Premium</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
- feature/ahmad/advanced-styling
-<header>
-    <h1>Swat Valley - Switzerland of Pakistan</h1>
-</header>
-
-<nav class="nav-bar">
-    <a href="index.html">Home</a>
-    <a href="lahore.html">Lahore</a>
-    <a href="hunza.html">Hunza</a>
-    <a href="karachi.html">Karachi</a>
-    <a href="swat.html" class="active">Swat</a>
-</nav>
-
-<main>
-
-<section>
-    <h2>About Swat Valley</h2>
-
-    <p>
-        Swat Valley is one of the most beautiful regions of Pakistan.
-        Located in Khyber Pakhtunkhwa, it is famous for green valleys,
-        rivers, forests and snow-covered mountains. Because of its
-        natural beauty, it is known as the Switzerland of Pakistan.
-    </p>
-</section>
-
-<section>
-
-    <article>
-        <h2>Malam Jabba</h2>
-
-        <figure>
-            <div class="img-placeholder"> </div>
-                Malam Jabba Image Placeholder
-
+    <!-- Unified Premium Navigation Bar -->
     <header class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">PakVista<span>.</span></a>
             <nav class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="index.html#dashboard" class="btn-nav">Back to Dashboard</a>
+                <a href="hunza.html">Hunza</a>
+                <a href="lahore.html">Lahore</a>
+                <a href="karachi.html">Karachi</a>
+                <a href="#" class="active">Swat</a>
             </nav>
         </div>
     </header>
 
+    <!-- Hero Content Module -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <img class="hero-bg" src="https://images.unsplash.com/photo-1627844718625-51e18cc8569c?auto=format&fit=crop&w=1800&q=80" alt="Swat Valley Alpine Forests">
@@ -65,25 +37,31 @@
         </div>
     </section>
 
-    <section id="itinerary" class="destinations-section">
+    <!-- Main Section with Clean Container Closures -->
+    <main class="destinations-section" id="itinerary">
         <div class="section-header">
             <h2>Bespoke Itinerary Units</h2>
             <p>Curated sub-alpine destinations within the Swat operational jurisdiction.</p>
         </div>
+        
         <div class="grid-container">
+            <!-- Kalam Card -->
             <div class="dest-card">
                 <div class="card-content">
                     <h3>Kalam Valley</h3>
                     <p>An enchanting upper-altitude basin surrounded by dense pine forests, majestic peak walls, and the source streams of the Swat River.</p>
                 </div>
- main
             </div>
+            
+            <!-- Malam Jabba Card -->
             <div class="dest-card">
                 <div class="card-content">
                     <h3>Malam Jabba Resort</h3>
                     <p>Pakistan's premier high-altitude ski resort base, presenting sweeping winter snowfields and extensive summer canopy trekking lines.</p>
                 </div>
             </div>
+            
+            <!-- Mahodand Card -->
             <div class="dest-card">
                 <div class="card-content">
                     <h3>Mahodand Glacial Lake</h3>
@@ -91,8 +69,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
+    <!-- Footer Module -->
     <footer class="footer">
         <p>&copy; 2026 PakVista. Curated Editorial Travel Assets.</p>
     </footer>
