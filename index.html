@@ -5,43 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PakVista Portal | Discover Pakistan</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-feature/ahmad/advanced-styling
-    <nav class="nav-bar">
-        <a href="index.html" class="active">Home</a>
-        <a href="lahore.html">Lahore</a>
-        <a href="hunza.html">Hunza Valley</a>
-        <a href="karachi.html">Karachi</a>
-        <a href="swat.html">Swat</a>
-    </nav>
-
-    <!-- Editorial Header Section -->
-    <header>
-        <h1>Discover Pakistan</h1>
-        <p>Experience the timeless heritage, pristine northern valleys, and breathtaking landscapes of an ancient land.</p>
-
-    <!-- Navigation Header -->
+    <!-- Consolidated Premium Navigation Bar -->
     <header class="navbar">
-        <div class="logo">PakVista</div>
-        <nav>
-            <ul>
-                <li><a href="#explore">Explore</a></li>
-                <li><a href="#destinations">Destinations</a></li>
-                <li><a href="#guides">Guides</a></li>
-                <li><a href="#journal">Journal</a></li>
-            </ul>
-        </nav>
- main
+        <div class="nav-container">
+            <a href="#" class="logo">PakVista<span>.</span></a>
+            <nav class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="hunza.html">Hunza</a>
+                <a href="lahore.html">Lahore</a>
+                <a href="karachi.html">Karachi</a>
+                <a href="swat.html">Swat</a>
+            </nav>
+        </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero-section" id="explore">
+        <section class="hero" id="explore">
+            <div class="hero-overlay"></div>
+            <!-- Standardizing background styling with premium splash image -->
+            <img class="hero-bg" src="https://images.unsplash.com/photo-1627844718625-51e18cc8569c?auto=format&fit=crop&w=1800&q=80" alt="Pakistan Alpine Horizons">
             <div class="hero-content">
+                <span class="hero-tag">The Gateway to Indus & Karakoram</span>
                 <h1>Discover Pakistan</h1>
                 <p>Experience the timeless heritage, pristine northern valleys, and breathtaking landscapes of an ancient land.</p>
+                <a href="#destinations" class="btn-primary">Explore Hubs</a>
             </div>
         </section>
 
@@ -63,37 +57,47 @@ feature/ahmad/advanced-styling
 
         <!-- Regional Explorer Grid -->
         <section class="destinations-section" id="destinations">
-            <h2>Featured Destinations</h2>
-            <div class="destinations-grid">
-                
+            <div class="section-header">
+                <h2>Featured Destinations</h2>
+                <p>Curated paths through the culture, coastlines, and alpine wonders of the region.</p>
+            </div>
+            
+            <div class="grid-container">
                 <!-- Hunza Card -->
-                <div class="destination-card">
-                    <h3>Hunza Valley</h3>
-                    <p>Framed by the towering Rakaposhi and Ultar Sar peaks, Hunza offers pristine alpine lakes, terraced orchards, and centuries-old fortresses.</p>
-                    <a href="hunza.html" class="btn-link">Explore Valley →</a>
-                </div>
-
-                <!-- Skardu Card -->
-                <div class="destination-card">
-                    <h3>Skardu & Baltistan</h3>
-                    <p>The gateway to the mighty Karakoram range. Home to turquoise lakes, high-altitude cold deserts, and rugged expedition trails.</p>
-                    <a href="#" class="btn-link">View Expeditions →</a>
+                <div class="dest-card">
+                    <div class="card-content">
+                        <h3>Hunza Valley</h3>
+                        <p>Framed by towering Rakaposhi and Ultar Sar peaks, Hunza offers pristine alpine lakes, terraced orchards, and centuries-old fortresses.</p>
+                        <a href="hunza.html" class="btn-link">Explore Valley →</a>
+                    </div>
                 </div>
 
                 <!-- Lahore Card -->
-                <div class="destination-card">
-                    <h3>Mughal Lahore</h3>
-                    <p>The cultural heart of the nation. Discover grand architectural masterpieces like the Badshahi Mosque, Shahi Qila, and dynamic local food markets.</p>
-                    <a href="lahore.html" class="btn-link">Discover History →</a>
+                <div class="dest-card">
+                    <div class="card-content">
+                        <h3>Mughal Lahore</h3>
+                        <p>The cultural heart of the nation. Discover grand architectural masterpieces like the Badshahi Mosque, Shahi Qila, and dynamic food markets.</p>
+                        <a href="lahore.html" class="btn-link">Discover History →</a>
+                    </div>
                 </div>
 
-                <!-- Swat Card (Integrating your created subpage) -->
-                <div class="destination-card">
-                    <h3>Swat Valley</h3>
-                    <p>Known as the Switzerland of the East. Explore lush green meadows, clear flowing rivers, and rich archaeological Buddhist ruins.</p>
-                    <a href="swat.html" class="btn-link">Explore Swat →</a>
+                <!-- Karachi Card -->
+                <div class="dest-card">
+                    <div class="card-content">
+                        <h3>Karachi Hub</h3>
+                        <p>A dynamic, sprawling coastal mega-city that acts as the financial engine room and cultural melting pot of the country.</p>
+                        <a href="karachi.html" class="btn-link">View Hubs →</a>
+                    </div>
                 </div>
 
+                <!-- Swat Card -->
+                <div class="dest-card">
+                    <div class="card-content">
+                        <h3>Swat Valley</h3>
+                        <p>Known as the Switzerland of the East. Explore lush green meadows, clear flowing alpine rivers, and rich historic ruins.</p>
+                        <a href="swat.html" class="btn-link">Explore Swat →</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -111,7 +115,7 @@ feature/ahmad/advanced-styling
     </main>
 
     <!-- Optimized Footer -->
-    <footer>
+    <footer class="footer">
         <p>&copy; 2026 PakVista Portal. All rights reserved. Built with pure performance optimization.</p>
     </footer>
 
