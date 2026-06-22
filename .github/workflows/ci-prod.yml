@@ -1,4 +1,4 @@
-name: Production CI Pipeline
+name: Production Deployment
 
 on:
   push:
@@ -6,24 +6,32 @@ on:
       - main
 
 jobs:
-  production-build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Sanitize Workspace Windows Metadata
-        run: |
-          find . -name "*:Zone.Identifier" -delete
-          echo "Workspace sanitized for Production environment."
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build Production Container
+      - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./Dockerfile
-          push: false
-          tags: pakvista-portal:latest
+          push: true
+          tags: mianahmad12345/pakvista:prod-latest
+          # This line smashes the Docker cache on every new commit
+          build-args: |
+            COMMIT_SHA=${{ github.sha }}
+
+      - name: Deploy to Render
+        run: |
+          curl -X POST "${{ secrets.RENDER_PRODUCTION_DEPLOY_HOOK }}"
