@@ -3,100 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- feature/ahmad/advanced-styling
-    <title>Hunza Valley - Heaven on Earth | PakVista</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header>
-    <h1>Hunza Valley - Heaven on Earth</h1>
-</header>
-
-<nav class="nav-bar">
-    <a href="index.html">Home</a>
-    <a href="lahore.html">Lahore</a>
-    <a href="hunza.html" class="active">Hunza Valley</a>
-    <a href="karachi.html">Karachi</a>
-    <a href="swat.html">Swat</a>
-</nav>
-
-<main>
-
-<section>
-    <h2>About Hunza Valley</h2>
-    <p>
-        Hunza is a mountainous valley in the Gilgit-Baltistan region of Pakistan.
-        It is situated in the extreme northern part of the country, bordering with the
-        Wakhan Corridor of Afghanistan and the Xinjiang region of China. Known for its
-        stunning scenery and longevity of its inhabitants, it's often referred to as Heaven on Earth.
-    </p>
-</section>
-
-<section>
-
-    <article>
-        <h2>Baltit Fort</h2>
-
-        <figure>
-            <div class="img-placeholder">
-                Baltit Fort Image Placeholder
-            </div>
-            <figcaption>
-                Ancient Fort in Karimabad
-            </figcaption>
-        </figure>
-
-        <p>
-            Baltit Fort is an ancient fort in the Hunza valley in Gilgit-Baltistan, Pakistan.
-            Founded in the 8th CE, it has been on the UNESCO World Heritage Tentative list since 2004.
-        </p>
-    </article>
-
-    <article>
-        <h2>Attabad Lake</h2>
-
-        <figure>
-            <div class="img-placeholder">
-                Attabad Lake Image Placeholder
-            </div>
-            <figcaption>
-                Turquoise Waters of Attabad
-            </figcaption>
-        </figure>
-
-        <p>
-            Attabad Lake is a lake in the Gojal Valley of northern Pakistan that was created in
-            January 2010 by a landslide dam. Its bright blue colors make it a top tourist destination.
-        </p>
-    </article>
-
-</section>
-
-</main>
-
-<footer>
-    <p>
-        © 2026 PakVista | Exploring Pakistan's Top Tourist Destinations
-    </p>
-</footer>
-
     <title>Hunza Valley | PakVista Premium</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Unified Premium Navigation Bar -->
     <header class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">PakVista<span>.</span></a>
             <nav class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="index.html#destinations" class="btn-nav">Back to Explorer</a>
+                <a href="#" class="active">Hunza</a>
+                <a href="lahore.html">Lahore</a>
+                <a href="karachi.html">Karachi</a>
+                <a href="swat.html">Swat</a>
             </nav>
         </div>
     </header>
 
+    <!-- Hero Content Module -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <img class="hero-bg" src="https://images.unsplash.com/photo-1548263514-a1b43d8ec6fc?auto=format&fit=crop&w=1800&q=80" alt="Hunza Peak Vistas">
@@ -108,37 +37,44 @@
         </div>
     </section>
 
-    <section id="itinerary" class="destinations-section">
+    <!-- Main Section with Clean Container Closures -->
+    <main class="destinations-section" id="itinerary">
         <div class="section-header">
             <h2>Key Expeditions</h2>
             <p>Essential points of cultural and geographic interest in the northern domain.</p>
         </div>
+        
         <div class="grid-container">
+            <!-- Baltit & Altit Forts Card -->
             <div class="dest-card">
                 <div class="card-content">
                     <h3>Altit & Baltit Forts</h3>
-                    <p>Architectural marvels dating back over 700 years, standing as guardians of the Silk Road legacy with panoramic valley views.</p>
+                    <p>Architectural marvels dating back over 700 years, standing as guardians of the Silk Road legacy with panoramic valley views. Founded in the 8th CE, they remain landmarks on the UNESCO tented lists.</p>
                 </div>
             </div>
+            
+            <!-- Attabad Lake Card -->
             <div class="dest-card">
                 <div class="card-content">
                     <h3>Attabad Lake</h3>
-                    <p>A striking, deep-blue body of water formed amidst dramatic canyon walls. Ideal for boat expeditions and alpine photography.</p>
+                    <p>A striking, deep-blue body of water formed amidst dramatic canyon walls by a landslide dam in 2010. Ideal for boat expeditions and alpine photography.</p>
                 </div>
             </div>
+            
+            <!-- Passu Cones Card -->
             <div class="dest-card">
                 <div class="card-content">
                     <h3>Passu Cones</h3>
-                    <p>The serrated, knife-edge peaks of the Passu massif offering one of the most iconic vistas anywhere in the Karakoram highway ecosystem.</p>
+                    <p>The serrated, knife-edge peaks of the Passu massif offering one of the most iconic vistas anywhere along the Karakoram Highway ecosystem.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
+    <!-- Footer Module -->
     <footer class="footer">
         <p>&copy; 2026 PakVista. Curated Editorial Travel Assets.</p>
     </footer>
- main
 
 </body>
 </html>
