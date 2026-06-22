@@ -8,6 +8,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment: production  # 👈 CRITICAL: This grants access to your environment secrets
     
     steps:
       - name: Checkout Code
@@ -28,7 +29,6 @@ jobs:
           context: .
           push: true
           tags: mianahmad12345/pakvista:prod-latest
-          # This line smashes the Docker cache on every new commit
           build-args: |
             COMMIT_SHA=${{ github.sha }}
 
