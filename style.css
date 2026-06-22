@@ -1,41 +1,775 @@
+feature/ahmad/advanced-styling
+/* ==========================================================================
+   PAKVISTA PREMIUM CLEAN DESIGN SYSTEM
+   ========================================================================== */
 :root {
-    --primary-green: #00401A;
-    --dark-neutral: #222222;
-    --light-bg: #F4F6F4;
-    --white: #FFFFFF;
+    /* Sophisticated, Clean Color Palette */
+    --primary: #004b23;           /* Deep Heritage Green */
+    --primary-light: #007236;     /* Vibrant Accent Green */
+    --neutral-dark: #1a202c;      /* Soft Charcoal (Never pure black for text) */
+    --neutral-muted: #4a5568;     /* Elegant Slate for body copy */
+    --neutral-light: #f7fafc;     /* Ultra-clean off-white page background */
+    --surface: #ffffff;           /* Crisp white for cards/containers */
+    --border: #edf2f7;            /* Subtle, faint dividers */
+    
+    /* Layout & Animation Tokens */
+    --max-width: 1140px;          /* Standard editorial container width */
+    --radius-sm: 6px;
+    --radius-lg: 16px;            /* Modern smooth corners */
+    --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 20px 35px rgba(0, 75, 35, 0.06);
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Premium ease-out */
 }
+
+/* Base Reset & Core Typography */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0; padding: 0;
-    background-color: var(--light-bg);
-    color: var(--dark-neutral);
-    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--neutral-light);
+    color: var(--neutral-dark);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
 }
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+/* ==========================================================================
+   MINIMALIST NAVIGATION
+   ========================================================================== */
 .nav-bar {
-    background-color: var(--primary-green);
-    display: flex; justify-content: center; padding: 1rem 0;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px); /* Modern glassy effect */
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.25rem;
 }
+
 .nav-bar a {
-    color: var(--white); text-decoration: none;
-    margin: 0 15px; font-weight: 600; font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--neutral-muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    padding: 0.25rem 0;
+    position: relative;
+    transition: var(--transition);
 }
-.nav-bar a:hover { text-decoration: underline; }
+
+.nav-bar a:hover, 
+.nav-bar a.active {
+    color: var(--primary);
+}
+
+/* Clean underline transition effect */
+.nav-bar a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary);
+    transform: scaleX(0);
+    transition: var(--transition);
+    transform-origin: right;
+}
+
+.nav-bar a:hover::after,
+.nav-bar a.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* ==========================================================================
+   CLEAN HERO LAYOUT
+   ========================================================================== */
 header {
-    text-align: center; padding: 3rem 1rem;
-    background: linear-gradient(rgba(0, 64, 26, 0.8), rgba(0, 64, 26, 0.9));
-    color: var(--white);
+    background-color: var(--surface);
+    text-align: center;
+    padding: 6rem 1.5rem 4rem 1.5rem;
+    border-bottom: 1px solid var(--border);
 }
-main { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; }
-.img-placeholder {
-    width: 100%; height: 350px;
-    background-color: #E0E4E0;
-    border: 3px dashed var(--primary-green); border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.2rem; color: #555; font-weight: bold; margin: 1.5rem 0;
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--neutral-dark);
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+    margin-bottom: 1rem;
 }
+
+header p {
+    font-size: 1.2rem;
+    color: var(--neutral-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   EDITORIAL IMAGE & MEDIA EXHIBITS
+   ========================================================================== */
+.showcase-container {
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.showcase-banner {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-subtle);
+    transition: var(--transition);
+}
+
+/* ==========================================================================
+   MINIMALIST METRIC DASHBOARD
+   ========================================================================== */
+.stats-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    background: var(--surface);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-subtle);
+    border: 1px solid var(--border);
+    margin: -4rem auto 4rem auto;
+    position: relative;
+    z-index: 10;
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    font-size: 0.85rem;
+    color: var(--neutral-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   PREMIUM CARD GRID MATRIX (MAGAZINE STYLE)
+   ========================================================================== */
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.destination-card {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-subtle);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Precision Image Scaling Container */
+.card-image-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 11; /* Clean consistent photographic layout */
+    overflow: hidden;
+    background-color: var(--neutral-light);
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.destination-card:hover .card-image-wrapper img {
+    transform: scale(1.05); /* Soft premium zoom */
+}
+
+.card-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-size: 1.4rem;
+    color: var(--neutral-dark);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    transition: var(--transition);
+}
+
+.destination-card:hover .card-content h3 {
+    color: var(--primary);
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: var(--neutral-muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* High-end Text Link Buttons */
+.read-more-btn {
+    align-self: flex-start;
+    margin-top: auto;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.read-more-btn:hover {
+    color: var(--primary-light);
+}
+
+/* ==========================================================================
+   CLEAN FORM / SUBSCRIPTION LAYOUT
+   ========================================================================== */
+.info-banner {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    padding: 5rem 2rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    margin: 6rem 0 2rem 0;
+    box-shadow: var(--shadow-subtle);
+}
+
+.info-banner h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--neutral-dark);
+    margin-bottom: 0.75rem;
+}
+
+.info-banner p {
+    color: var(--neutral-muted);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+}
+
+.info-banner form {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 0.5rem;
+}
+
+.info-banner input[type="email"] {
+    flex: 1;
+    padding: 0.85rem 1.25rem;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    color: var(--neutral-dark);
+    background-color: var(--neutral-light);
+    transition: var(--transition);
+}
+
+.info-banner input[type="email"]:focus {
+    outline: none;
+    border-color: var(--primary);
+    background-color: var(--surface);
+    box-shadow: 0 0 0 3px rgba(0, 75, 35, 0.08);
+}
+
+.info-banner button {
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    padding: 0.85rem 1.75rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.info-banner button:hover {
+    background-color: var(--primary-light);
+}
+
+/* ==========================================================================
+   MINIMALIST FOOTER SYSTEM
+   ========================================================================== */
 footer {
-    text-align: center; padding: 1.5rem 0;
-    background-color: var(--dark-neutral); color: var(--white);
-    margin-top: 4rem;
+    background-color: var(--surface);
+    color: var(--neutral-muted);
+    text-align: center;
+    padding: 4rem 1.5rem;
+    border-top: 1px solid var(--border);
+    margin-top: 6rem;
 }
+
+footer p {
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN ADAPTATIONS
+   ========================================================================== */
+@media (max-width: 768px) {
+    header {
+        padding: 4rem 1rem 3rem 1rem;
+    }
+    header h1 {
+        font-size: 2.25rem;
+    }
+    .stats-grid {
+        flex-direction: column;
+        gap: 1.75rem;
+        padding: 2rem 1.5rem;
+        margin-top: -2rem;
+    }
+    .stat-item:not(:last-child) {
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 1.75rem;
+    }
+    .info-banner form {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .showcase-banner {
+        height: 320px;
+    }
+}
+
+/* Premium Minimalist Stylesheet - Reinforced Click Stacking */
+:root {
+    --bg-primary: #fcfcfc;
+    --text-main: #111111;
+    --text-muted: #666666;
+    --accent: #2e4a3f;
+    --accent-light: #f2f5f3;
+    --card-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(252, 252, 252, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 9999; /* Highest priority layer */
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+    position: relative;
+    z-index: 10000;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    position: relative;
+    z-index: 10000;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-left: 2rem;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.nav-links .btn-nav {
+    background-color: var(--text-main);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+}
+
+.nav-links .btn-nav:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    padding: 0 2rem;
+    z-index: 1; /* Establishes clean base stacking context */
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2; /* Pushed completely to back */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%);
+    z-index: -1; /* Sits over image, under text */
+}
+
+.hero-content {
+    max-width: 800px;
+    color: white;
+    position: relative; 
+    z-index: 10; /* Forces text and buttons above overlays to allow clicks */
+}
+
+.hero-tag {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 1rem;
+    color: rgba(255,255,255,0.8);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    color: rgba(255,255,255,0.9);
+}
+
+.btn-primary {
+    display: inline-block;
+    text-decoration: none;
+    background-color: white;
+    color: var(--text-main);
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: var(--transition);
+    position: relative;
+    z-index: 20;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Destinations Section */
+.destinations-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 7rem 2rem 4rem 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.dest-card {
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.02);
+    position: relative;
+    z-index: 5;
+}
+
+.dest-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.dest-card:hover .img-wrapper img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 2rem;
+    position: relative;
+    z-index: 6;
+}
+
+.card-content h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.card-content p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-link {
+    display: inline-block; /* Makes the click target clean and predictable */
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    padding: 0.5rem 0;
+    position: relative;
+    z-index: 10;
+}
+
+.card-link:hover {
+    letter-spacing: 0.5px;
+}
+
+/* Stats Section */
+.stats-section {
+    background-color: var(--accent-light);
+    padding: 5rem 2rem;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 5;
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 2rem;
+}
+
+.stat-item .stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+}
+
+.stat-item .stat-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+.newsletter-box {
+    background-color: #111111;
+    color: white;
+    padding: 4rem 3rem;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.newsletter-box h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter-box p {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subscribe-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 15;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 0.9rem 1.2rem;
+    border-radius: 4px;
+    border: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.btn-submit {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.9rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-submit:hover {
+    background-color: #3d6354;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .subscribe-form { flex-direction: column; }
+}
+ main

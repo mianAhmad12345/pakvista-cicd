@@ -3,33 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PakVista - Home</title>
+    <title>PakVista Portal | Discover Pakistan</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="nav-bar">
-        <a href="index.html">Home</a>
-        <a href="lahore.html">Lahore</a>
-        <a href="hunza.html">Hunza</a>
-        <a href="karachi.html">Karachi</a>
-        <a href="swat.html">Swat</a>
-    </nav>
-    <header>
-        <h1>Welcome to PakVista</h1>
-        <p>Explore the stunning heritage, incredible mountain valleys, and vibrant cities of Pakistan.</p>
+
+    <!-- Consolidated Premium Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">PakVista<span>.</span></a>
+            <nav class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="hunza.html">Hunza</a>
+                <a href="lahore.html">Lahore</a>
+                <a href="karachi.html">Karachi</a>
+                <a href="swat.html">Swat</a>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <section>
-            <h2>Discover Pakistan</h2>
-            <p>Pakistan offers a rich spectrum of tourism opportunities, ranging from the architectural landmarks of the Mughal Empire in Lahore to the breathtaking alpine landscapes of the Karakoram range in Hunza.</p>
-            <figure>
-                <div class="img-placeholder">Visual Overview of Pakistan Tourism</div>
-                <figcaption>Figure 1: Welcome to the beautiful terrains of Pakistan.</figcaption>
-            </figure>
+        <!-- Hero Section -->
+        <section class="hero" id="explore">
+            <div class="hero-overlay"></div>
+            <!-- Standardizing background styling with premium splash image -->
+            <img class="hero-bg" src="https://images.unsplash.com/photo-1627844718625-51e18cc8569c?auto=format&fit=crop&w=1800&q=80" alt="Pakistan Alpine Horizons">
+            <div class="hero-content">
+                <span class="hero-tag">The Gateway to Indus & Karakoram</span>
+                <h1>Discover Pakistan</h1>
+                <p>Experience the timeless heritage, pristine northern valleys, and breathtaking landscapes of an ancient land.</p>
+                <a href="#destinations" class="btn-primary">Explore Hubs</a>
+            </div>
+        </section>
+
+        <!-- Metrics / Stats Dashboard -->
+        <section class="stats-dashboard">
+            <div class="stat-card">
+                <h3>7,000+</h3>
+                <p>Glaciers Explored</p>
+            </div>
+            <div class="stat-card">
+                <h3>100+</h3>
+                <p>Heritage Sites</p>
+            </div>
+            <div class="stat-card">
+                <h3>24/7</h3>
+                <p>Local Assistance</p>
+            </div>
+        </section>
+
+        <!-- Regional Explorer Grid -->
+        <section class="destinations-section" id="destinations">
+            <div class="section-header">
+                <h2>Featured Destinations</h2>
+                <p>Curated paths through the culture, coastlines, and alpine wonders of the region.</p>
+            </div>
+            
+            <div class="grid-container">
+                <!-- Hunza Card -->
+                <div class="dest-card">
+                    <div class="card-content">
+                        <h3>Hunza Valley</h3>
+                        <p>Framed by towering Rakaposhi and Ultar Sar peaks, Hunza offers pristine alpine lakes, terraced orchards, and centuries-old fortresses.</p>
+                        <a href="hunza.html" class="btn-link">Explore Valley →</a>
+                    </div>
+                </div>
+
+                <!-- Lahore Card -->
+                <div class="dest-card">
+                    <div class="card-content">
+                        <h3>Mughal Lahore</h3>
+                        <p>The cultural heart of the nation. Discover grand architectural masterpieces like the Badshahi Mosque, Shahi Qila, and dynamic food markets.</p>
+                        <a href="lahore.html" class="btn-link">Discover History →</a>
+                    </div>
+                </div>
+
+                <!-- Karachi Card -->
+                <div class="dest-card">
+                    <div class="card-content">
+                        <h3>Karachi Hub</h3>
+                        <p>A dynamic, sprawling coastal mega-city that acts as the financial engine room and cultural melting pot of the country.</p>
+                        <a href="karachi.html" class="btn-link">View Hubs →</a>
+                    </div>
+                </div>
+
+                <!-- Swat Card -->
+                <div class="dest-card">
+                    <div class="card-content">
+                        <h3>Swat Valley</h3>
+                        <p>Known as the Switzerland of the East. Explore lush green meadows, clear flowing alpine rivers, and rich historic ruins.</p>
+                        <a href="swat.html" class="btn-link">Explore Swat →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Dispatch Section -->
+        <section class="newsletter-section">
+            <div class="newsletter-container">
+                <h2>The Traveler's Dispatch</h2>
+                <p>Receive curated routes, historical context pieces, and seasonal travel alerts directly to your inbox.</p>
+                <form class="subscribe-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn-subscribe">Subscribe</button>
+                </form>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2026 PakVista Dev Crew. Faculty of Information Technology, UCP.</p>
+
+    <!-- Optimized Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 PakVista Portal. All rights reserved. Built with pure performance optimization.</p>
     </footer>
+
 </body>
 </html>
